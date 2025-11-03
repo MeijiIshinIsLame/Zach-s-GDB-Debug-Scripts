@@ -5,7 +5,7 @@ script_dir = os.path.dirname(__file__)
 
 class StepLogger(gdb.Command):
     def __init__(self):
-        super(StepLogger, self).__init__("logstep", gdb.COMMAND_USER)
+        super(StepLogger, self).__init__("logsteps", gdb.COMMAND_USER)
 
     def invoke(self, arg, from_tty):
         logfile = open(os.path.join(script_dir, "regs.log"), "w")
